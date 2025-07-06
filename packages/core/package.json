@@ -93,6 +93,30 @@
         "uuid": "11.0.3"
     },
     "publishConfig": {
-        "access": "public"
-    }
+  "access": "public"
+},
+  "pnpm": {
+    "allowedBuildDependencies": [
+      "@biomejs/biome",
+      "@swc/core",
+      "better-sqlite3",
+      "bufferutil",
+      "core-js",
+      "core-js-pure",
+      "es5-ext",
+      "esbuild",
+      "keccak",
+      "node-hid",
+      "nx",
+      "onnxruntime-node",
+      "protobufjs",
+      "secp256k1",
+      "sharp",
+      "sodium-native",
+      "usb",
+      "utf-8-validate"
+    ]
+  }
 }
+
+
