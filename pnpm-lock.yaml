@@ -47,6 +47,9 @@ importers:
       '@injectivelabs/sdk-ts':
         specifier: ^1.14.33
         version: 1.14.41(@types/react@19.0.10)(bufferutil@4.0.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(utf-8-validate@5.0.10)
+      '@vitejs/plugin-react-swc':
+        specifier: ^3.8.0
+        version: 3.8.0(@swc/helpers@0.5.15)(vite@5.4.12(@types/node@22.13.5)(terser@5.39.0))
       '@vitest/eslint-plugin':
         specifier: 1.0.1
         version: 1.0.1(@typescript-eslint/utils@8.24.1(eslint@9.21.0(jiti@1.21.7))(typescript@5.6.3))(eslint@9.21.0(jiti@1.21.7))(typescript@5.6.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))
@@ -86,6 +89,9 @@ importers:
       uuid:
         specifier: ^11.1.0
         version: 11.1.0
+      vite-plugin-compression:
+        specifier: ^0.5.1
+        version: 0.5.1(vite@5.4.12(@types/node@22.13.5)(terser@5.39.0))
       ws:
         specifier: 8.18.0
         version: 8.18.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -2133,7 +2139,7 @@ packages:
     resolution: {integrity: sha512-/u1VTzw7XooK7rqeD7JLUSwOyRSesPUk0U37BV9zK0axJc1q0nRbKFGFLYCQ16OtdOJTTwGfGp11Lx9B45bRCQ==}
     engines: {node: '>=10'}
     peerDependencies:
-      '@solana/web3.js': npm:@solana/web3.js@1.95.5
+      '@solana/web3.js': ^1.68.0
 
   '@coral-xyz/borsh@0.29.0':
     resolution: {integrity: sha512-s7VFVa3a0oqpkuRloWVPdCK7hMbAMY270geZOGfCnaqexrP5dTIpbEHL33req6IYPPJ0hYa71cdvJ1h6V55/oQ==}
@@ -5404,7 +5410,7 @@ packages:
     resolution: {integrity: sha512-7+80nrEMdUKlK37V6kOe024+T7J4nNss0F8LQ9OOPYdWCCfJmsGUzVx2W3oeizZR4IHM6N4yC9v1Xqwc3BTPWw==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/web3.js': npm:@solana/web3.js@1.95.5
+      '@solana/web3.js': ^1.91.6
 
   '@solana/spl-token-group@0.0.5':
     resolution: {integrity: sha512-CLJnWEcdoUBpQJfx9WEbX3h6nTdNiUzswfFdkABUik7HVwSNA98u5AYvBVK2H93d9PGMOHAak2lHW9xr+zAJGQ==}
@@ -5416,13 +5422,13 @@ packages:
     resolution: {integrity: sha512-V1N/iX7Cr7H0uazWUT2uk27TMqlqedpXHRqqAbVO2gvmJyT0E0ummMEAVQeXZ05ZhQ/xF39DLSdBp90XebWEug==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/web3.js': npm:@solana/web3.js@1.95.5
+      '@solana/web3.js': ^1.95.3
 
   '@solana/spl-token-metadata@0.1.6':
     resolution: {integrity: sha512-7sMt1rsm/zQOQcUWllQX9mD2O6KhSAtY1hFR2hfFwgqfFWzSY9E9GDvFVNYUI1F0iQKcm6HmePU9QbKRXTEBiA==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/web3.js': npm:@solana/web3.js@1.95.5
+      '@solana/web3.js': ^1.95.3
 
   '@solana/spl-token-registry@0.2.4574':
     resolution: {integrity: sha512-JzlfZmke8Rxug20VT/VpI2XsXlsqMlcORIUivF+Yucj7tFi7A0dXG7h+2UnD0WaZJw8BrUz2ABNkUnv89vbv1A==}
@@ -5452,7 +5458,7 @@ packages:
     resolution: {integrity: sha512-1nCnUqfHVtdguFciVWaY/RKcQz1IF4b31jnKgAmjU9QVN1q7dRUkTEWJZgTYIEtsULjVnC9jRqlhgGN39WbKKA==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/web3.js': npm:@solana/web3.js@1.95.5
+      '@solana/web3.js': ^1.91.6
 
   '@solana/spl-token@0.4.8':
     resolution: {integrity: sha512-RO0JD9vPRi4LsAbMUdNbDJ5/cv2z11MGhtAvFeRzT4+hAGE/FUzRi0tkkWtuCfSIU3twC6CtmAihRp/+XXjWsA==}
@@ -5464,7 +5470,7 @@ packages:
     resolution: {integrity: sha512-g3wbj4F4gq82YQlwqhPB0gHFXfgsC6UmyGMxtSLf/BozT/oKd59465DbnlUK8L8EcimKMavxsVAMoLcEdeCicg==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@solana/web3.js': npm:@solana/web3.js@1.95.5
+      '@solana/web3.js': ^1.95.3
 
   '@solana/spl-type-length-value@0.1.0':
     resolution: {integrity: sha512-JBMGB0oR4lPttOZ5XiUGyvylwLQjt1CPJa6qQ5oM+MBCndfjz2TKKkw0eATlLLcYmq1jBVsNlJ2cD6ns2GR7lA==}
@@ -24926,6 +24932,13 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
+  '@vitejs/plugin-react-swc@3.8.0(@swc/helpers@0.5.15)(vite@5.4.12(@types/node@22.13.5)(terser@5.39.0))':
+    dependencies:
+      '@swc/core': 1.10.18(@swc/helpers@0.5.15)
+      vite: 5.4.12(@types/node@22.13.5)(terser@5.39.0)
+    transitivePeerDependencies:
+      - '@swc/helpers'
+
   '@vitejs/plugin-react-swc@3.8.0(@swc/helpers@0.5.15)(vite@6.1.1(@types/node@22.13.5)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0))':
     dependencies:
       '@swc/core': 1.10.18(@swc/helpers@0.5.15)
@@ -30152,7 +30165,7 @@ snapshots:
 
   jest-diff@29.7.0:
     dependencies:
-      chalk: 4.1.0
+      chalk: 4.1.2
       diff-sequences: 29.6.3
       jest-get-type: 29.6.3
       pretty-format: 29.7.0
@@ -32116,7 +32129,7 @@ snapshots:
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.7
       axios: 1.7.9
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       cliui: 8.0.1
@@ -32345,7 +32358,7 @@ snapshots:
   ora@5.3.0:
     dependencies:
       bl: 4.1.0
-      chalk: 4.1.0
+      chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       is-interactive: 1.0.0
@@ -36274,6 +36287,15 @@ snapshots:
       - terser
       - tsx
       - yaml
+
+  vite-plugin-compression@0.5.1(vite@5.4.12(@types/node@22.13.5)(terser@5.39.0)):
+    dependencies:
+      chalk: 4.1.2
+      debug: 4.4.0(supports-color@5.5.0)
+      fs-extra: 10.1.0
+      vite: 5.4.12(@types/node@22.13.5)(terser@5.39.0)
+    transitivePeerDependencies:
+      - supports-color
 
   vite-plugin-compression@0.5.1(vite@6.1.1(@types/node@22.13.5)(jiti@1.21.7)(terser@5.39.0)(yaml@2.7.0)):
     dependencies:

@@ -3,20 +3,19 @@
     "version": "0.25.8",
     "main": "src/index.ts",
     "type": "module",
-    "scripts": {
-        "start": "node --loader ts-node/esm src/index.ts",
-        "dev": "node --loader ts-node/esm src/index.ts",
-        "check-types": "tsc --noEmit",
-        "test": "jest"
-    },
+   "scripts": {
+  "start": "node --loader ts-node/esm src/index.ts",
+  "dev": "node --loader ts-node/esm src/index.ts",
+  "check-types": "tsc --noEmit",
+  "test": "jest",
+  "test:coverage": "jest --coverage"
+},
     "nodemonConfig": {
-        "watch": [
-            "src",
-            "../core/dist"
-        ],
-        "ext": "ts,json",
-        "exec": "node --enable-source-maps --loader ts-node/esm src/index.ts"
-    },
+  "watch": ["src", "../core/dist"],
+  "ext": "ts,json",
+  "exec": "node --enable-source-maps --loader ts-node/esm src/index.ts"
+},
+
     "dependencies": {
         "@elizaos-plugins/client-telegram": "workspace:0.25.6-alpha.1",
         "@elizaos-plugins/plugin-solana": "workspace:^",

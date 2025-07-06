@@ -7,10 +7,10 @@
     "moduleResolution": "Bundler",
     "types": ["node", "jest"],
     "paths": {
-      "@elizaos/core": ["../packages/core/src"],
-      "@elizaos/client-direct": ["../packages/client-direct/src"],
-      "@elizaos/plugin-bootstrap": ["../packages/plugin-bootstrap/src"]
-    }
+  "@elizaos/core/*": ["../packages/core/src/*"],
+  "@elizaos/client-direct/*": ["../packages/client-direct/src/*"],
+  "@elizaos/plugin-bootstrap/*": ["../packages/plugin-bootstrap/src/*"]
+}
   },
   "ts-node": {
     "experimentalSpecifierResolution": "node",
